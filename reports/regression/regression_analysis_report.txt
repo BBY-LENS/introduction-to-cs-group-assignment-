@@ -1,0 +1,36 @@
+======================================================================
+REGRESSION ANALYSIS REPORT
+======================================================================
+
+Analysis Date: 2025-12-14 11:05:44
+Dataset: Superstore.csv
+Dependent Variable: Profit
+Independent Variables: Sales, Quantity, Discount
+Observations: 9,994.0
+
+MODEL SUMMARY
+----------------------------------------
+R-squared: 0.2727
+Adjusted R-squared: 0.2725
+F-statistic: 1248.73 (p=0.0000)
+Residual Standard Error: $199.81
+
+COEFFICIENTS
+----------------------------------------
+Intercept: 34.9721 (p=0.0000)
+✓ Sales: 0.1800 (p=0.0000)
+✓ Quantity: -2.9622 (p=0.0012)
+✓ Discount: -233.4570 (p=0.0000)
+
+INTERPRETATION
+----------------------------------------
+The model explains 27.3% of variability in Profit.
+Most significant predictor: Sales
+Model strength: VERY WEAK
+
+RECOMMENDATIONS
+----------------------------------------
+To increase Profit:
+• increase Sales by 1 unit → $Profit changes by $0.18
+• decrease Quantity by 1 unit → $Profit changes by $2.96
+• decrease Discount by 1 unit → $Profit changes by $233.46

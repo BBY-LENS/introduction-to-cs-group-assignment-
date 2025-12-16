@@ -1,0 +1,63 @@
+======================================================================
+DESCRIPTIVE STATISTICS ANALYSIS REPORT - SUPERSTORE DATASET
+======================================================================
+
+Analysis Date: 2025-12-15 19:29:01
+Dataset: Superstore.csv
+Observations Analyzed: 9,994
+Variables Analyzed: Sales, Quantity, Discount, Profit
+
+SUMMARY STATISTICS
+----------------------------------------
+
+Sales:
+  Count: 9,994
+  Mean: 229.86
+  Median: 54.49
+  Std Dev: 623.25
+  Range: 22638.04
+  IQR: 192.66
+  Skewness: 12.971
+
+Quantity:
+  Count: 9,994
+  Mean: 3.79
+  Median: 3.00
+  Std Dev: 2.23
+  Range: 13.00
+  IQR: 3.00
+  Skewness: 1.278
+
+Discount:
+  Count: 9,994
+  Mean: 0.16
+  Median: 0.20
+  Std Dev: 0.21
+  Range: 0.80
+  IQR: 0.20
+  Skewness: 1.684
+
+Profit:
+  Count: 9,994
+  Mean: 28.66
+  Median: 8.67
+  Std Dev: 234.26
+  Range: 14999.95
+  IQR: 27.64
+  Skewness: 7.560
+
+
+KEY FINDINGS
+----------------------------------------
+1. Data Quality: Complete dataset with no missing values
+2. Central Tendency: Clear typical values for each variable
+3. Variability: Different spread patterns across measures
+4. Distribution: Varying skewness and kurtosis patterns
+5. Insights: Provides foundation for further analysis
+
+VISUALIZATIONS GENERATED
+----------------------------------------
+1. distribution_histograms.png
+2. boxplots_comparison.png
+3. correlation_matrix.png
+4. statistics_comparison.png
