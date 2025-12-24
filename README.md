@@ -36,16 +36,16 @@ This provides valuable insights for decision-making in marketing, pricing, and r
 The following plots illustrate the comparative analysis:
 
 ### Regional Sales
-![Region Sales](visuals/region_sales.png)
+![Region Sales](analysis/visuals/region_sales.png)
 
 ### Regional Profit
-![Region Profit](visuals/region_profit.png)
+![Region Profit](analysis/visuals/region_profit.png)
 
 ### Segment Profit
-![Segment Profit](visuals/segment_profit.png)
+![Segment Profit](analysis/visuals/segment_profit.png)
 
 ### Category Discount
-![Category Discount](visuals/category_discount.png)
+![Category Discount](analysis/visuals/category_discount.png)
 
 ---
 
