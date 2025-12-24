@@ -27,7 +27,7 @@ avg_sales = df.groupby("Region")["Sales"].mean()
 avg_sales.plot(kind="bar", title="Average Sales by Region")
 plt.ylabel("Average Sales")
 plt.tight_layout()
-plt.savefig("region_sales.png")   # saves directly into analysis folder
+plt.savefig("visuals/region_sales.png")   # saves directly into analysis folder
 plt.close()
 
 # Average profit by customer segment
@@ -35,7 +35,7 @@ segment_profit = df.groupby("Segment")["Profit"].mean()
 segment_profit.plot(kind="bar", title="Average Profit by Segment")
 plt.ylabel("Average Profit")
 plt.tight_layout()
-plt.savefig("segment_profit.png")
+plt.savefig("visuals/segment_profit.png")
 plt.close()
 
 # Average discount by product category
@@ -43,7 +43,7 @@ category_discount = df.groupby("Category")["Discount"].mean()
 category_discount.plot(kind="bar", title="Average Discount by Category")
 plt.ylabel("Average Discount")
 plt.tight_layout()
-plt.savefig("category_discount.png")
+plt.savefig("visuals/category_discount.png")
 plt.close()
 
 # ANOVA: Sales by region
@@ -62,5 +62,5 @@ region_profit = df.groupby("Region")["Profit"].mean()
 region_profit.plot(kind="bar", title="Average Profit by Region")
 plt.ylabel("Average Profit")
 plt.tight_layout()
-plt.savefig("region_profit.png")
+plt.savefig("visuals/region_profit.png")
 plt.close()
