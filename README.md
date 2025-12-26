@@ -1,228 +1,80 @@
+# Superstore Analysis 
 
-# 🧩 Complete Setup Guide (Anaconda + VS Code + GitHub Desktop + Git)  
-
-**!!!! note that the code you paste in is b/n bash and ```. ok do not put ``` in to the code. you can also put all this into copilot so it can help you everystep of the way.** !!!!!!
-
-## Step 1 — Install Required Tools
-- Install **Anaconda**
-- Install **GitHub Desktop**
-- Install **VS Code** (+ extensions: Python, Jupyter, Pylance)
-- Install **Git** (from [git-scm.com](https://git-scm.com/downloads))
+This section of the group project focuses on **Correlation & Relationships, Outlier Analysis, and Categorical Data Analysis** using the Superstore dataset.  
+It includes a notebook, supporting visuals, a written report, and presentation slides.
 
 ---
 
-## Step 2 — Verify Git Installation
-Open **Command Prompt** or **Anaconda Prompt** and type:
+## 📖 Introduction
+The goal of this analysis is to explore relationships between sales and profit, detect outliers in sales data, and examine categorical differences across product categories, customer segments, and regions.
+
+---
+
+## 📊 Components of My Work
+- **Notebook:** `notebooks/Helen_analysis.ipynb`  
+  - Correlation between Sales and Profit  
+  - Outlier detection and interpretation  
+  - Category, Segment, and Region analysis with cross-tabs and heatmaps  
+
+- **Visuals:** `visuals/`  
+  - Correlation heatmap  
+  - Outlier boxplot  
+  - Category proportions bar chart  
+  - Segment distribution bar chart  
+  - Category vs Segment heatmap  
+  - Category vs Region heatmap  
+
+- **Report:** `report/Helen_report.docx`  
+  - Detailed written explanation of methodology and findings  
+
+- **Slides:** `slides/Helen_slides.pdf`  
+  - Presentation-ready summary of the notebook analysis  
+
+---
+
+## ⚙️ Methodology
+1. **Correlation Analysis**  
+   - Examined relationship between Sales and Profit (r ≈ 0.48, moderate positive correlation).  
+   - Visualized with a heatmap.  
+
+2. **Outlier Detection**  
+   - Used boxplots and IQR method to identify extreme values in Sales.  
+   - Found 1,167 outliers, discussed trade-offs of handling them.  
+
+3. **Categorical Analysis**  
+   - Category proportions: Office Supplies dominate (60%), followed by Furniture (21%) and Technology (18%).  
+   - Segment distribution: Consumer segment is largest (52%), followed by Corporate (30%) and Home Office (18%).  
+   - Regional distribution: West and East regions lead in transactions.  
+   - Cross-tab heatmaps reveal distinct purchasing patterns by segment and region.  
+
+---
+
+## 📈 Key Findings
+- **Sales vs Profit:** Moderate positive correlation — higher sales generally lead to higher profit, but discounts distort margins.  
+- **Outliers:** Extreme sales values can bias averages; handling them improves model reliability.  
+- **Categories:** Office Supplies drive most transactions, while Furniture and Technology vary by segment and region.  
+- **Segments & Regions:** Consumer customers dominate, with regional differences suggesting tailored strategies.  
+
+---
+
+## ▶️ How to Run
+From the project root:
 ```bash
-git --version
-```
-You should see something like:
-```
-git version 2.52.0
-```
+jupyter notebook notebooks/Helen_analysis.ipynb
 
----
-create an Intro_grp_assignment folder on your pc.on downloads if you want.
+ Tools & Libraries
+- Python 3.8+
+- Pandas, NumPy, Seaborn, Matplotlib
 
-## Step 3 — Clone Repository
-- Open **GitHub Desktop**
-- Clone repo:
-  ```bash
-  https://github.com/emuit315-bit/Superstore-analysis.git
-  ```
-- Save in:
-  ```
-  C:\Users\<YourName>\Downloads\Intro_grp_assign\Superstore-analysis   or    whereever you created the intro grp assignment folder.
-  ```
+📄 Outputs
+- Cleaned dataset: data/superstore_analysis.csv
+- Visualizations: PNG files in visuals/
+- Report: DOCX file in report/
+- Slides: PDF file in slides/
 
----
+✅ Conclusion
+This analysis provides actionable insights into sales drivers, customer segments, and regional demand.
+By combining statistical methods, visualizations, and clear documentation, the work demonstrates a professional workflow for business analytics
 
-inside the superstore analysis folder create a Data folder, notebooks folder, Visuals folder, report folder, slides folder.
-
-Go to https://www.kaggle.com/datasets/vivek468/superstore-dataset-final    
-
-download the csv file and put it inside the Data folder.
-
-## Step 4 — Add Dataset File
-Inside your cloned repo folder, ensure you have:
-```
-Superstore-analysis/
-└── data/
-    └── Superstore.csv
-```
-✅ This dataset is required for notebooks to run.
-
----
-
-## Step 5 — Create Python Environment (Command Line Method — Recommended)
-In **Anaconda Prompt**:
-```bash
-conda create -n superstore python=3.14
-conda activate superstore
-```
-Install libraries:
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter statsmodels
-```
-
----
-
-## Step 6 — Optional: Create Environment in Anaconda Navigator (GUI Method)
-If teammates prefer a graphical interface:
-1. Open **Anaconda Navigator**
-2. Go to the **Environments tab → Create**
-3. Name: `superstore`
-4. Python version: `3.14`
-5. Add packages: `pandas, numpy, matplotlib, seaborn, scikit-learn, jupyter, statsmodels`
-6. In the **Home tab**, select the `superstore` environment and launch **VS Code** or **Jupyter Notebook** directly.
-
-**Why this is not mandatory:**
-- Navigator is just a GUI wrapper for the same commands.
-- Using the command line ensures **everyone runs identical reproducible steps** (important for team projects).
-- Navigator is optional for teammates who dislike the command line.
-
----
-
-## Step 7 — Link Git to VS Code
-1. Open **VS Code**
-2. Go to **View → Source Control** (branch icon on sidebar)
-3. Open folder: `File → Open Folder → Superstore-analysis`
-4. Git controls (commit, push, pull) should appear
-
----
-
-## Step 8 — Set VS Code as External Editor in GitHub Desktop
-1. In **GitHub Desktop**, go to:  
-   **File → Options → Integrations**
-2. Under **External Editor**, select **Visual Studio Code**.
-   - If VS Code doesn’t appear, click **Browse…** and select:
-     ```
-     C:\Users\<YourName>\AppData\Local\Programs\Microsoft VS Code\Code.exe
-     ```
-3. Now you’ll see **“Open in Visual Studio Code”** in the repo menu.
-   - If you prefer, you can always open the folder manually in VS Code (`File → Open Folder → Superstore-analysis`).
-
----
-
-## Step 9 — Confirm Anaconda Environment in VS Code
-1. Open **VS Code**
-2. Command Palette (`Ctrl+Shift+P`) → `Python: Select Interpreter`
-3. Choose:
-   ```
-   Python (superstore)
-   ```
-4. If missing, register it:
-   ```bash
-   conda activate superstore
-   python -m ipykernel install --user --name=superstore --display-name "Python (superstore)"
-   ```
-   Restart VS Code.
-
----
-
-## Step 10 — Folder Structure (Outputs Included)
-```
-Superstore-analysis/
-│
-├── data/
-│   └── Superstore.csv
-│
-├── notebooks/
-│   ├── analysis_superstore_<name>.ipynb   # Each teammate creates their own notebook
-│
-├── visuals/        # Save charts, plots, and figures here
-├── report/         # Final written report (Word/PDF)
-├── slides/         # Presentation slides (PowerPoint/Google Slides)
-│
-├── README.md
-└── download_data
-```
-
----
-
-## Step 11 — Create Notebook
-1. In VS Code, right‑click the `notebooks` folder → **New File**
-2. Name it:
-   ```
-   analysis_superstore_<name>.ipynb
-   ```
-   (replace `<name>` with your identifier)
-3. Open the notebook → select kernel **Python (superstore)**
-4. Start coding:
-   ```python
-   import pandas as pd
-   df = pd.read_csv("../data/Superstore.csv", encoding="latin1")
-   df.head()
-   ```
-5. **Keyboard shortcuts:**
-   - Run code cell → **Shift + Enter**
-   - Save notebook → **Ctrl + S**
-
----
-
-## Step 12 — Test Everything
-1. Save your notebook
-2. Commit changes in GitHub Desktop with a clear message
-3. Push origin
-4. Verify notebook appears on GitHub.com
-
----
-
-## Extra Info — Git Prompt Commands (Optional)
-You don’t need these for daily work (GitHub Desktop + VS Code is enough), but the Git Prompt gives you **manual control** if the GUI misbehaves or for advanced fixes.
-
-- Check Git installation
-  ```bash
-  git --version
-  ```
-- Clone a repo
-  ```bash
-  git clone https://github.com/emuit315-bit/Superstore-analysis.git
-  ```
-- Check repo status
-  ```bash
-  git status
-  ```
-- Stage changes
-  ```bash
-  git add .
-  ```
-- Commit changes
-  ```bash
-  git commit -m "Added analysis_superstore_<name>.ipynb"
-  ```
-- Push to GitHub
-  ```bash
-  git push origin main
-  ```
-- Pull updates from teammates
-  ```bash
-  git pull origin main
-  ```
-
-**Note:** This section is **extra info only**. Use GitHub Desktop for everyday commits/pushes. The Git Prompt is your backup tool when you need full control.
-```
-
----
----
-
-## ✅ Setup Checklist
-
-- [ ] Install required tools (Anaconda, GitHub Desktop, VS Code with extensions, Git)
-- [ ] Verify Git installation with `git --version`
-- [ ] Clone the repository into local folder using GitHub Desktop
-- [ ] Ensure dataset file `Superstore.csv` is placed inside `/data`
-- [ ] Create Python environment `superstore` (via Anaconda Prompt or Navigator)
-- [ ] Install required libraries (`pandas, numpy, matplotlib, seaborn, scikit-learn, jupyter, statsmodels`)
-- [ ] Open repo folder in VS Code (`File → Open Folder → Superstore-analysis`)
-- [ ] Set VS Code as external editor in GitHub Desktop (File → Options → Integrations)
-- [ ] Confirm VS Code is using the correct interpreter (`Python (superstore)`)
-- [ ] Verify folder structure includes `/data`, `/notebooks`, `/visuals`, `/report`, `/slides`
-- [ ] Create notebook in `/notebooks` named `analysis_superstore_<name>.ipynb`
-- [ ] Run code cell with **Shift + Enter**
-- [ ] Save notebook with **Ctrl + S**
-- [ ] Commit changes in GitHub Desktop with a clear message
-- [ ] Push changes to GitHub
-- [ ] Verify notebook and outputs appear correctly on GitHub.com
 
 
