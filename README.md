@@ -127,10 +127,3 @@ Together, these visuals make the comparisons easy to understand: they show where
 👉 These findings answer Question 3 by combining statistical evidence with clear visual comparisons, making the analysis understandable and actionable.
  
 
- Group members 
-1.	Blen seife         ……………………………………………..UGR/2307/17
-2.	Helen getachew …………………………………………….UGR/828517
-3.	Adonay mengstu ..……………………………….………....UGR/3145/17
-4.	Lazary Ephrem  …………………………………………… UGR/0883/17
-5.	Christian Bisrat …….…………………………………………UGR/5145/17
-submitted to :- Dr.getahun 
